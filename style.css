@@ -1,9 +1,10 @@
-* {
+body {
   margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  display: block;
-}
+  padding: 0; 
+  box-sizing: border-box; 
+  /* display: block;   */
+  font-family: 'Open Sans', sans-serif;
+} 
 
 #au-batido {
   background-image: url('images/au-batido.jpg');
@@ -11,7 +12,11 @@
   background-attachment: fixed;
   background-size: contain;
   background-position: center;
-              }
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; 
+
+  }
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,10 +24,31 @@ font-family: 'Parisienne', cursive;
 font-weight: normal;
 text-align: center;
 }
+
 .content {
   text-align: left;
-  max-width: 457px;
  }
+
+
+.about-tile {
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .about-tile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-tile p {
+    height: 300px;
+  }
+  .content {
+    margin-right: 30px;
+  }
+}
+
 /*
 .bio p {
     width: 350px;
@@ -44,18 +70,6 @@ text-align: center;
   margin-bottom: 4%;
 }
 
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
 
 a {
   text-decoration: none;
@@ -163,8 +177,8 @@ nav.circle ul li a:hover:after {
 }
 
 #gday {
-  margin-top: 45px;
-  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -172,18 +186,22 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgba(255,255,255,0);
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
 }
 
 
 /* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
 .fa {
-  padding: 30px;
+  padding: 10px;
   margin-right: 10px;
   margin-left: 10px;
   font-size: 30px;
-  width: 50px;
-  text-align: center;
+  width: 35px;
+  /* align-items: center; */
+  /* text-align: center; */
   text-decoration: none;
 }
 
