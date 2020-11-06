@@ -29,11 +29,17 @@ text-align: center;
   text-align: left;
  }
 
+#mentor {
+  text-align: right;
+}
 
 .about-tile {
   display: flex;
-  background-color: aqua;
   justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  /* border-bottom: 0.063rem solid rgba(0,0,0,0.2);  */
+  margin-bottom: 4%;
 }
 
 @media screen and (max-width: 768px) {
@@ -49,6 +55,20 @@ text-align: center;
   }
 }
 
+.about-tile:after {
+  content: ""; /* This is necessary for the pseudo element to work. */ 
+  display: block; /* This will put the pseudo element on its own line. */
+  width: 4%; /* Change this to whatever width you want to have before hover. */
+  padding-top: 20px; /* This creates some space between the element and the border. */
+  /* border-bottom: 1px solid black; This creates the border. Replace black with whatever color you want. */
+  transition: .5s; /* This establishes the amount of time in seconds the animation should take from start to finish */
+}
+
+.about-tile:hover:after {
+  width: 15%; /* This will be the new width of your border when on hover */
+}
+
+
 /*
 .bio p {
     width: 350px;
@@ -58,6 +78,7 @@ text-align: center;
 }
 */
 .bio p {
+  
   max-width: 500px;
   height: 180px;
   padding: 10px;
@@ -70,10 +91,6 @@ text-align: center;
   margin-bottom: 4%;
 }
 
-
-a {
-  text-decoration: none;
-}
 
 .container {
   max-width: 960px;
