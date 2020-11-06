@@ -1,0 +1,215 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+#au-batido {
+  background-image: url('images/au-batido.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+              }
+
+
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Parisienne', cursive;
+font-weight: normal;
+text-align: center;
+}
+.content {
+  text-align: left;
+  max-width: 457px;
+ }
+/*
+.bio p {
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+*/
+.bio p {
+  max-width: 500px;
+  height: 180px;
+  padding: 10px;
+}
+
+.bio {
+  list-style-type: none;
+  padding-left: 0;
+  border-bottom: 0.063rem solid rgba(0,0,0,0.2);
+  margin-bottom: 4%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto 60px auto;
+  padding-top: 10px;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+/*  margin: 0 auto 2em; */
+/*  display: block; */
+}
+/* NAVIGATION */
+nav {
+  width: 95%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0);
+  padding: 5px 0;
+/*  box-shadow: 0px 5px 0px #dedede; */
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  font-size: small;
+  text-transform: uppercase;
+  margin: 0 5px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+/* Circle */
+nav.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+nav.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+}
+nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+#gday {
+  margin-top: 45px;
+  margin-bottom: 25px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255,255,255,0);
+  text-align: center;
+}
+
+
+/* https://www.w3schools.com/howto/howto_css_social_media_buttons.asp */
+.fa {
+  padding: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-linkedin {
+  background: rgba(255,255,255,0);
+  color: #211F1F;
+}
+
+.fa-facebook {
+  background: rgba(255,255,255,0);
+  color: #211F1F;
+  ;
+}
+
+.fa-youtube {
+    background: rgba(255,255,255,0);
+    color: #211F1F;
+    ;
+}
+
+.fa-github {
+      background: rgba(255,255,255,0);
+      color: #211F1F;
+}
+.fa:hover {
+  opacity: 0.7;
+  transform: scale(2);
+  transition: transform .2s;
+}
