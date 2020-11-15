@@ -25,6 +25,11 @@ font-weight: normal;
 text-align: center;
 }
 
+strong {font-weight: bolder;
+        font-size: larger;
+
+}
+
 .content {
   text-align: left;
  }
