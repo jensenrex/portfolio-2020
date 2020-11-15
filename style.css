@@ -227,12 +227,7 @@ footer {
 #blog {
   padding: 20px;
   background: #f1f1f1;
-  @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-      width: 100%;
-      padding: 0;
-    }
-  }
+
 }
 
 .blog-head {
@@ -245,14 +240,14 @@ footer {
 /* Blog Left column */
 .leftcol {
   float: left;
-  width: 75%;
+  width: 74%;
 }
 
 /* Blog Right column */
 .rightcol {
   float: right;
   width: 25%;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 /* blog images */
@@ -264,7 +259,7 @@ footer {
 /* blog card effect for blog posts */
 .card {
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  padding: 10px;
   margin-top: 20px;
 }
 /* Clear floats after the columns */
@@ -274,6 +269,14 @@ footer {
   clear: both;
 }
 
+@media screen and (max-width: 800px) {
+  .leftcol, .rightcol {
+    width: 100%;
+    padding: 0;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+}
 #foot-home {
   
   bottom: 0;
